@@ -6,7 +6,6 @@ module Decidim
     class ProjectsController < Decidim::Budgets::ApplicationController
       include FilterResource
       include NeedsCurrentOrder
-      include Orderable
       include Decidim::Budgets::Orderable
 
       helper_method :projects, :project

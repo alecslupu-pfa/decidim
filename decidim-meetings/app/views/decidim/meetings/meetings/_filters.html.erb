@@ -29,4 +29,6 @@
   <% if component_settings.creation_enabled_for_participants? %>
     <%= form.check_boxes_tree :origin, filter_origin_values, legend_title: t(".origin") %>
   <% end %>
+
+  <%= form.check_boxes_tree :meeting_type, filter_meeting_types_values, legend_title: t(".meeting_type") %>
 <% end %>

@@ -51,6 +51,9 @@ module Decidim
 
       scope :visible, -> { where("decidim_meetings_meetings.private_meeting != ? OR decidim_meetings_meetings.transparent = ?", true, true) }
 
+      scope :in_person, -> { where(  nil ) }
+      scope :online, -> {  where(  nil )  }
+
       scope :official_origin, lambda {
         where(decidim_author_type: "Decidim::Organization")
       }
@@ -70,7 +73,7 @@ module Decidim
                           participatory_space: { component: :participatory_space },
                           A: :title,
                           D: [:description, :address],
-                          datetime: :start_time
+                          datetime: :start_time,
                         },
                         index_on_create: ->(meeting) { meeting.visible? },
                         index_on_update: ->(meeting) { meeting.visible? })

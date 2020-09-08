@@ -27,6 +27,16 @@ module Decidim
         )
       end
 
+      def filter_meeting_types_values
+        TreeNode.new(
+          TreePoint.new("", t("decidim.meetings.meetings.filters.meeting_types_values.all")),
+          [
+            TreePoint.new("in_person", t("decidim.meetings.meetings.filters.meeting_types_values.in_person")),
+            TreePoint.new("online", t("decidim.meetings.meetings.filters.meeting_types_values.on_line"))
+          ]
+        )
+      end
+
       def filter_date_values
         TreeNode.new(
           TreePoint.new("", t("decidim.meetings.meetings.filters.date_values.all")),

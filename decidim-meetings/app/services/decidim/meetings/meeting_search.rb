@@ -15,6 +15,15 @@ module Decidim
         super(scope, options)
       end
 
+      def search_meeting_type
+        online = [options[:meeting_type]].flatten.member?("online") ? query.online : nil
+        in_person = [options[:meeting_type]].flatten.member?("in_person") ? query.in_person : nil
+
+        query
+          .where(id: online)
+          .or(query.where(id: in_person))
+      end
+
       # Handle the search_text filter
       def search_search_text
         query

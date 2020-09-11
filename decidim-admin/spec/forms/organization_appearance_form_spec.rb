@@ -19,6 +19,7 @@ module Decidim
           ca: "Descripció"
         }
       end
+      let(:group_highlight_enabled) { false }
       let(:organization) { create(:organization) }
       let(:cta_button_path) { nil }
       let(:highlighted_content_banner_enabled) { false }
@@ -36,6 +37,9 @@ module Decidim
       end
       let(:omnipresent_banner_title) { empty_traslatable_attribute }
       let(:omnipresent_banner_short_description) { empty_traslatable_attribute }
+      let(:official_highlight_color) { "#000000" }
+      let(:group_highlight_color) { "#000000" }
+      let(:citizen_highlight_color) { "#000000" }
       let(:attributes) do
         {
           "organization" => {
@@ -67,7 +71,11 @@ module Decidim
             "omnipresent_banner_title_ca" => omnipresent_banner_title[:ca],
             "omnipresent_banner_short_description_en" => omnipresent_banner_short_description[:en],
             "omnipresent_banner_short_description_es" => omnipresent_banner_short_description[:es],
-            "omnipresent_banner_short_description_ca" => omnipresent_banner_short_description[:ca]
+            "omnipresent_banner_short_description_ca" => omnipresent_banner_short_description[:ca],
+            "official_highlight_color" => official_highlight_color,
+            "group_highlight_color" => group_highlight_color,
+            "citizen_highlight_color" => citizen_highlight_color,
+            "group_highlight_enabled" => group_highlight_enabled
           }
         }
       end
@@ -145,6 +153,12 @@ module Decidim
 
       context "when cta_button_path is a valid path with underscore" do
         let(:cta_button_path) { "processes/my_process/" }
+
+        it { is_expected.to be_valid }
+      end
+
+      context "when group_highlight_enabled is true" do
+        let(:group_highlight_enabled) { true }
 
         it { is_expected.to be_valid }
       end

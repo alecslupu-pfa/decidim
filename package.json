@@ -260,7 +260,7 @@
     "apollo-cache-inmemory": "^1.1.4",
     "apollo-client": "^2.0.3",
     "apollo-codegen": "^0.19.0",
-    "apollo-link-http": "^1.5.3",
+    "apollo-link-http": "^1.5.17",
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
     "graphql": "^0.13.0",

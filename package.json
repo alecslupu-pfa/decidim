@@ -270,7 +270,7 @@
     "postcss": "^7.0.32",
     "prop-types": "^15.5.7",
     "react": "^16.0.0",
-    "react-apollo": "^2.0.4",
+    "react-apollo": "^2.5.8",
     "react-dom": "^16.0.0",
     "react-i18nify": "^1.8.8",
     "react-select": "^1.2.1",

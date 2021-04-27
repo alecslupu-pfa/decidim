@@ -267,7 +267,7 @@
     "graphql-anywhere": "^4.1.5",
     "graphql-tag": "^2.8.0",
     "jquery": "^3.2.1",
-    "postcss": "^7.0.32",
+    "postcss": "^8.2.13",
     "prop-types": "^15.5.7",
     "react": "^16.0.0",
     "react-apollo": "^2.0.4",
@@ -275,7 +275,7 @@
     "react-i18nify": "^1.8.8",
     "react-select": "^1.2.1",
     "react-test-renderer": "^16.0.0",
-    "stylelint": "^13.6.1",
+    "stylelint": "^13.7.0",
     "unfetch": "^3.0.0",
     "uuid": "^3.2.1"
   },
